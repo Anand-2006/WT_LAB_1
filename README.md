@@ -1,16 +1,37 @@
-# React + Vite
+# Real-Time World Clock Dashboard 🕒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, high-performance web dashboard built with React and Vite. This application integrates synchronized analog and digital clocks, multi-region timezone tracking, custom alarms, and dynamic UI controls with smooth real-time updates.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+* Analog & Digital Clocks: Real-time synchronized time display featuring smooth second-hand movement and crisp digital readouts.
+* Timezone Management: Add, remove, and monitor live local times across various global regions in real time.
+* Custom Alarm System: Set and manage dynamic alarms with visual and audio feedback when triggered.
+* Dynamic UI Controls: Toggle customizable themes, switch clock view formats, and adjust dashboard layouts on the fly.
+* Optimized Performance: Efficient state updating using custom React hooks to prevent unnecessary re-renders and maintain smooth animations.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Framework: React
+* Build Tool: Vite
+* Language: JavaScript (ES6+)
+* Styling: CSS3 / Modern Flexbox & Grid Layouts
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have Node.js (v16+ recommended) installed on your system.
+
+### Installation
+
+1. Clone the repository:
+   `bash
+   git clone [https://github.com/Anand-2006/WT_LAB_1.git](https://github.com/Anand-2006/WT_LAB_1.git)
+   cd WT_LAB_1
