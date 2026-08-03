@@ -1,0 +1,297 @@
+/* ---- Base ---- */
+* { box-sizing: border-box; }
+
+.wcd-root {
+  min-height: 100vh;
+  background: #020617;
+  color: #f1f5f9;
+  padding: 32px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.wcd-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---- Header ---- */
+.wcd-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.wcd-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wcd-title h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.wcd-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wcd-btn {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: rgba(30, 41, 59, 0.6);
+  color: #f1f5f9;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.wcd-btn:hover { background: #1e293b; }
+
+.wcd-icon-btn {
+  padding: 7px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: rgba(30, 41, 59, 0.6);
+  color: #f1f5f9;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.15s ease;
+}
+.wcd-icon-btn:hover { background: #1e293b; }
+
+.wcd-select {
+  font-size: 12px;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 7px 8px;
+  color: #f1f5f9;
+}
+
+/* ---- Alarm ringing banner ---- */
+.wcd-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+}
+
+.wcd-banner-text {
+  font-size: 14px;
+  color: #bae6fd;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wcd-banner-dismiss {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #38bdf8;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---- Clock grid ---- */
+.wcd-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 640px) {
+  .wcd-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) {
+  .wcd-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---- Clock card ---- */
+.wcd-card {
+  position: relative;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.wcd-card-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+}
+.wcd-card-remove:hover { color: #f87171; }
+
+.wcd-card-header {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 2px;
+}
+
+.wcd-card-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.wcd-card-date {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.wcd-analog {
+  width: 112px;
+  height: 112px;
+}
+
+.wcd-digital {
+  font-family: "SF Mono", "Courier New", monospace;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #f1f5f9;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Alarm panel ---- */
+.wcd-panel {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.wcd-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.wcd-panel-header h2 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+.wcd-alarm-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.wcd-input {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 13px;
+  color: #f1f5f9;
+}
+
+.wcd-input-label {
+  flex: 1;
+  min-width: 100px;
+}
+
+.wcd-add-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #38bdf8;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.wcd-empty {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+
+.wcd-alarm-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wcd-alarm-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.wcd-alarm-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wcd-alarm-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  color: #cbd5e1;
+}
+
+.wcd-alarm-time {
+  font-family: "SF Mono", "Courier New", monospace;
+  font-size: 14px;
+  color: #f1f5f9;
+}
+
+.wcd-alarm-meta {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.wcd-alarm-delete {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+}
+.wcd-alarm-delete:hover { color: #f87171; }
